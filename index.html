@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saylani Welfare International Trust - Official Website</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome 6.5.1 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts (Inter & Montserrat) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        saylani: {
+                            green: '#20ad3b',
+                            darkGreen: '#188c2e',
+                            lightGreen: '#eefad6',
+                            blue: '#0d5db8',
+                            darkBlue: '#0a4993',
+                            lightBlue: '#00a8ff',
+                            darkBg: '#182030',
+                            cardBg: '#f8fafc'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #20ad3b; border-radius: 4px; }
+        .dropdown-menu { display: none; }
+        .dropdown-parent:hover .dropdown-menu { display: block; }
+        .green-underline {
+            background: linear-gradient(180deg, transparent 60%, #bbf7d0 60%);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-white antialiased selection:bg-saylani-green selection:text-white">
+
+    <!-- 1. TOP BAR & NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100">
+        <!-- Top Info Header -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between py-2.5">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2">
+                    <div class="flex items-center">
+                        <svg class="w-10 h-10 md:w-12 md:h-12" viewBox="0 0 100 100" fill="none">
+                            <circle cx="50" cy="50" r="46" fill="#20ad3b"/>
+                            <path d="M 28 50 Q 50 15 72 50 Q 50 85 28 50 Z" fill="#ffffff"/>
+                            <circle cx="50" cy="50" r="14" fill="#0d5db8"/>
+                            <path d="M 45 32 L 55 32 L 50 20 Z" fill="#ffffff"/>
+                        </svg>
+                        <div class="ml-2 flex flex-col">
+                            <span class="text-xl md:text-2xl font-extrabold font-heading text-saylani-blue tracking-tight leading-none">
+                                Saylani<span class="text-saylani-green">Welfare</span>
+                            </span>
+                            <span class="text-[9px] md:text-[10px] text-gray-500 font-semibold tracking-wider uppercase -mt-0.5">
+                                International Trust
+                            </span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Desktop Contacts & Actions -->
+                <div class="hidden xl:flex items-center space-x-5 text-xs lg:text-sm font-medium text-gray-600">
+                    <a href="mailto:info@saylaniwelfare.com" class="flex items-center gap-1.5 hover:text-saylani-green transition-colors">
+                        <i class="fa-regular fa-envelope text-saylani-green"></i>
+                        <span>info@saylaniwelfare.com</span>
+                    </a>
+                    <a href="https://wa.me/03111729526" class="flex items-center gap-1.5 hover:text-saylani-green transition-colors">
+                        <i class="fa-brands fa-whatsapp text-saylani-green text-base"></i>
+                        <span>0311 1729526</span>
+                    </a>
+                    <a href="tel:+9221111729526" class="flex items-center gap-1.5 hover:text-saylani-green transition-colors">
+                        <i class="fa-solid fa-phone text-saylani-green text-xs"></i>
+                        <span>+92 21 111 729 526</span>
+                    </a>
+
+                    <!-- Lang selector -->
+                    <div class="flex items-center gap-1 border border-gray-200 rounded-full px-3 py-1 bg-gray-50">
+                        <i class="fa-solid fa-globe text-gray-400"></i>
+                        <select class="bg-transparent border-none text-xs font-semibold focus:outline-none cursor-pointer">
+                            <option>ENGLISH</option>
+                            <option>URDU</option>
+                        </select>
+                    </div>
+
+                    <!-- Cart -->
+                    <button class="relative p-2 text-gray-700 hover:text-saylani-green">
+                        <i class="fa-solid fa-cart-shopping text-base"></i>
+                    </button>
+
+                    <!-- Be a Sponsor -->
+                    <a href="#" class="bg-saylani-blue hover:bg-saylani-darkBlue text-white px-5 py-2 rounded-full font-bold text-xs flex items-center gap-1.5 shadow-sm transition-all">
+                        <i class="fa-regular fa-user"></i>
+                        Be a Sponsor
+                    </a>
+
+                    <!-- Donate Now -->
+                    <a href="#quick-donate" class="bg-saylani-green hover:bg-saylani-darkGreen text-white px-5 py-2 rounded-full font-bold text-xs flex items-center gap-1.5 shadow-sm transition-all">
+                        Donate Now
+                        <i class="fa-solid fa-heart text-red-200 text-xs animate-pulse"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <div class="flex xl:hidden items-center gap-2">
+                    <a href="#quick-donate" class="bg-saylani-green text-white px-3 py-1.5 rounded-full text-xs font-bold shadow">
+                        Donate
+                    </a>
+                    <button id="mobileNavToggle" class="p-2 text-gray-700 hover:text-saylani-green text-xl focus:outline-none">
+                        <i class="fa-solid fa-bars" id="navIcon"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Main Menu Bar (Desktop) -->
+            <nav class="hidden xl:flex items-center justify-center border-t border-gray-100 py-2">
+                <ul class="flex items-center space-x-8 text-sm font-medium text-gray-700">
+                    <li><a href="#" class="text-saylani-green font-bold">Home</a></li>
+                    <li class="relative dropdown-parent cursor-pointer py-1">
+                        <span class="flex items-center gap-1 hover:text-saylani-green">About <i class="fa-solid fa-chevron-down text-[10px] text-gray-400"></i></span>
+                        <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md py-2 border border-gray-100 z-50">
+                            <a href="#" class="block px-4 py-2 text-xs hover:bg-emerald-50 hover:text-saylani-green">Introduction</a>
+                            <a href="#" class="block px-4 py-2 text-xs hover:bg-emerald-50 hover:text-saylani-green">Chairman Message</a>
+                        </div>
+                    </li>
+                    <li class="relative dropdown-parent cursor-pointer py-1">
+                        <span class="flex items-center gap-1 hover:text-saylani-green">Services <i class="fa-solid fa-chevron-down text-[10px] text-gray-400"></i></span>
+                        <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md py-2 border border-gray-100 z-50">
+                            <a href="#" class="block px-4 py-2 text-xs hover:bg-emerald-50 hover:text-saylani-green">Dastarkhwan</a>
+                            <a href="#" class="block px-4 py-2 text-xs hover:bg-emerald-50 hover:text-saylani-green">Education & IT</a>
+                            <a href="#" class="block px-4 py-2 text-xs hover:bg-emerald-50 hover:text-saylani-green">Medical Services</a>
+                        </div>
+                    </li>
+                    <li class="relative dropdown-parent cursor-pointer py-1">
+                        <span class="flex items-center gap-1 hover:text-saylani-green">Media <i class="fa-solid fa-chevron-down text-[10px] text-gray-400"></i></span>
+                        <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md py-2 border border-gray-100 z-50">
+                            <a href="#" class="block px-4 py-2 text-xs hover:bg-emerald-50 hover:text-saylani-green">Videos</a>
+                            <a href="#" class="block px-4 py-2 text-xs hover:bg-emerald-50 hover:text-saylani-green">Latest News</a>
+                        </div>
+                    </li>
+                    <li><a href="#" class="hover:text-saylani-green">Contact Us</a></li>
+                    <li><a href="#" class="hover:text-saylani-green">Bank Details</a></li>
+                    <li><a href="#" class="hover:text-saylani-green">Donor Dashboard</a></li>
+                    <li><a href="#" class="hover:text-saylani-green">Be a Sponsor</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobileDrawer" class="hidden xl:hidden bg-white border-t border-gray-100 p-4 space-y-3 shadow-xl">
+            <div class="flex flex-col space-y-2 text-sm font-semibold text-gray-700">
+                <a href="#" class="text-saylani-green bg-emerald-50 p-2 rounded">Home</a>
+                <a href="#" class="p-2 hover:bg-gray-50 rounded">About</a>
+                <a href="#" class="p-2 hover:bg-gray-50 rounded">Services</a>
+                <a href="#" class="p-2 hover:bg-gray-50 rounded">Media</a>
+                <a href="#" class="p-2 hover:bg-gray-50 rounded">Contact Us</a>
+                <a href="#" class="p-2 hover:bg-gray-50 rounded">Bank Details</a>
+                <a href="#" class="p-2 hover:bg-gray-50 rounded">Donor Dashboard</a>
+            </div>
+            <div class="pt-3 border-t border-gray-100 flex flex-col gap-2">
+                <a href="#" class="w-full text-center bg-saylani-blue text-white py-2 rounded-lg font-bold text-xs">Be a Sponsor</a>
+                <a href="#quick-donate" class="w-full text-center bg-saylani-green text-white py-2 rounded-lg font-bold text-xs">Donate Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section class="bg-gradient-to-b from-emerald-50/40 via-white to-white py-12 lg:py-20 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                
+                <!-- Hero Left Text -->
+                <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-emerald-100/80 text-saylani-green font-bold text-xs px-3.5 py-1.5 rounded-full">
+                        <i class="fa-solid fa-hands-holding-child"></i>
+                        <span>Pakistan's Largest Welfare NGO</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-heading text-gray-900 leading-tight">
+                        Welcome to <br class="hidden sm:inline" />
+                        <span class="text-saylani-green green-underline">Saylani Welfare</span> <br />
+                        International Trust
+                    </h1>
+
+                    <p class="text-gray-600 text-sm sm:text-base leading-relaxed max-w-xl mx-auto lg:mx-0 font-medium">
+                        The largest NGO offering free daily meals to underprivileged families in 63+ areas. Working with local communities to support those in need across Pakistan.
+                    </p>
+
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#quick-donate" class="bg-saylani-green hover:bg-saylani-darkGreen text-white px-8 py-3.5 rounded-full font-bold text-sm shadow-md transition-all hover:shadow-lg">
+                            DONATE NOW
+                        </a>
+                        <a href="#live-appeals" class="bg-white hover:bg-gray-50 text-saylani-green border border-gray-200 px-8 py-3.5 rounded-full font-bold text-sm transition-all shadow-sm">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Right Card Image with Badge -->
+                <div class="lg:col-span-6 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                        <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1000&auto=format&fit=crop" alt="Smiling Children" class="w-full h-[380px] sm:h-[450px] object-cover">
+                        
+                        <!-- Floating Counter Overlay -->
+                        <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-5 rounded-2xl shadow-xl border border-gray-100 flex items-center justify-between">
+                            <div>
+                                <h3 class="text-3xl font-extrabold text-saylani-green font-heading">450,000+</h3>
+                                <p class="text-xs font-bold text-gray-800">People Served Daily</p>
+                                <p class="text-[11px] text-gray-500 font-medium">Across 1138+ areas in Pakistan</p>
+                            </div>
+                            <div class="w-12 h-12 bg-saylani-green/10 text-saylani-green rounded-2xl flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. LIVE APPEALS SECTION -->
+    <section id="live-appeals" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-2 mb-12">
+                <span class="bg-emerald-100 text-saylani-green text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">OUR INITIATIVES</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-gray-900">Live <span class="text-saylani-green">Appeals</span></h2>
+                <p class="text-gray-500 text-sm max-w-2xl mx-auto">Making a difference in the lives of thousands every day through comprehensive welfare programs</p>
+            </div>
+
+            <!-- Appeals Grid Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Card 1 -->
+                <div class="group relative rounded-2xl overflow-hidden bg-gradient-to-b from-blue-900 to-saylani-blue text-white shadow-lg flex flex-col justify-between h-[360px] p-6 hover:-translate-y-1 transition-transform">
+                    <div class="space-y-3 z-10">
+                        <span class="text-[10px] uppercase font-bold tracking-widest bg-white/20 px-2.5 py-1 rounded-md">THROUGH THE SOCIAL WELFARE DEPARTMENT</span>
+                        <h3 class="text-xl font-bold font-heading">Social Welfare Support</h3>
+                        <p class="text-xs text-blue-100">Providing electricity bill solutions, business support, marriage assistance, and easy loan support.</p>
+                    </div>
+                    <div class="relative z-10 flex justify-between items-center pt-4 border-t border-white/20">
+                        <div class="w-10 h-10 rounded-full bg-white text-saylani-green flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                        </div>
+                        <a href="#quick-donate" class="bg-white text-saylani-blue font-bold text-xs px-4 py-2 rounded-full hover:bg-blue-50">Donate</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group relative rounded-2xl overflow-hidden bg-amber-500 text-white shadow-lg flex flex-col justify-between h-[360px] p-6 hover:-translate-y-1 transition-transform">
+                    <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=600&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-overlay">
+                    <div class="space-y-3 z-10">
+                        <h3 class="text-2xl font-extrabold font-heading">Your's Fitra, Fidya & Kaffara</h3>
+                        <p class="text-xs text-amber-100">A hope for poors. Fulfill your religious obligations with guaranteed distribution to deserving families.</p>
+                    </div>
+                    <div class="relative z-10 flex justify-between items-center pt-4 border-t border-white/20">
+                        <div class="w-10 h-10 rounded-full bg-white text-amber-600 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-house-user"></i>
+                        </div>
+                        <a href="#quick-donate" class="bg-white text-amber-800 font-bold text-xs px-4 py-2 rounded-full hover:bg-amber-50">Donate</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group relative rounded-2xl overflow-hidden bg-emerald-700 text-white shadow-lg flex flex-col justify-between h-[360px] p-6 hover:-translate-y-1 transition-transform">
+                    <div class="space-y-3 z-10">
+                        <div class="flex gap-1 text-[10px] font-bold">
+                            <span class="bg-emerald-900/60 px-2 py-0.5 rounded">HEALTHY ANIMALS</span>
+                            <span class="bg-emerald-900/60 px-2 py-0.5 rounded">SHARIAH</span>
+                        </div>
+                        <h3 class="text-2xl font-extrabold font-heading">Sadqa Animal</h3>
+                        <p class="text-xs text-emerald-100">Perform Sadqah Animal sacrifice year-round with strict hygienic and Shariah compliance.</p>
+                    </div>
+                    <div class="relative z-10 flex justify-between items-center pt-4 border-t border-white/20">
+                        <div class="w-10 h-10 rounded-full bg-white text-saylani-green flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-cow"></i>
+                        </div>
+                        <a href="#quick-donate" class="bg-white text-saylani-green font-bold text-xs px-4 py-2 rounded-full hover:bg-emerald-50">Donate</a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group relative rounded-2xl overflow-hidden bg-sky-700 text-white shadow-lg flex flex-col justify-between h-[360px] p-6 hover:-translate-y-1 transition-transform">
+                    <div class="space-y-3 z-10">
+                        <span class="text-[10px] font-bold tracking-widest bg-white/20 px-2.5 py-1 rounded-md">MEDICAL & DIAGNOSTIC</span>
+                        <h3 class="text-2xl font-extrabold font-heading">Saylani Medical Services</h3>
+                        <p class="text-xs text-sky-100">Free clinics, mobile X-rays, blood banks, dialysis center, and eye care for thousands.</p>
+                    </div>
+                    <div class="relative z-10 flex justify-between items-center pt-4 border-t border-white/20">
+                        <div class="w-10 h-10 rounded-full bg-white text-sky-600 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-stethoscope"></i>
+                        </div>
+                        <a href="#quick-donate" class="bg-white text-sky-800 font-bold text-xs px-4 py-2 rounded-full hover:bg-sky-50">Donate</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. QUICK DONATE SECTION -->
+    <section id="quick-donate" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-2 mb-8">
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-gray-900">Quick <span class="text-saylani-green">Donate</span></h2>
+                <p class="text-gray-500 text-sm">Choose your cause and make an impact today</p>
+            </div>
+
+            <!-- Tab Pills -->
+            <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
+                <button class="bg-saylani-green text-white font-bold text-xs sm:text-sm px-6 py-2.5 rounded-full shadow">General</button>
+                <button class="bg-white text-gray-700 hover:bg-gray-100 font-bold text-xs sm:text-sm px-6 py-2.5 rounded-full border border-gray-200">Daily Food</button>
+                <button class="bg-white text-gray-700 hover:bg-gray-100 font-bold text-xs sm:text-sm px-6 py-2.5 rounded-full border border-gray-200">Medical</button>
+                <button class="bg-white text-gray-700 hover:bg-gray-100 font-bold text-xs sm:text-sm px-6 py-2.5 rounded-full border border-gray-200">Welfare</button>
+                <button class="bg-white text-gray-700 hover:bg-gray-100 font-bold text-xs sm:text-sm px-6 py-2.5 rounded-full border border-gray-200">Education</button>
+            </div>
+
+            <!-- Quick Donate Banner Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Campaign 1 -->
+                <div class="bg-gradient-to-r from-teal-900 to-cyan-800 text-white rounded-3xl p-8 relative overflow-hidden shadow-xl flex flex-col justify-between h-[320px]">
+                    <span class="absolute top-6 right-6 bg-saylani-green text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">SADQA</span>
+                    <div class="space-y-3 max-w-sm">
+                        <h3 class="text-2xl sm:text-3xl font-extrabold font-heading">Sadqa / Aqiqa Animal</h3>
+                        <p class="text-xs text-teal-100 leading-relaxed">Fulfill your Sadqa or Aqiqa through the sacrifice of animals in accordance with Islamic principles.</p>
+                    </div>
+                    <div>
+                        <button onclick="alert('Proceeding to Sadqa Animal Donation!')" class="bg-white text-saylani-green hover:bg-gray-100 font-extrabold text-xs px-6 py-3 rounded-full shadow transition-all">
+                            DONATE NOW
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Campaign 2 -->
+                <div class="bg-gradient-to-r from-stone-800 to-neutral-900 text-white rounded-3xl p-8 relative overflow-hidden shadow-xl flex flex-col justify-between h-[320px]">
+                    <span class="absolute top-6 right-6 bg-emerald-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">RAMZAN</span>
+                    <div class="space-y-3 max-w-sm">
+                        <h3 class="text-2xl sm:text-3xl font-extrabold font-heading">Fitra, Fidya & Kaffara</h3>
+                        <p class="text-xs text-gray-300 leading-relaxed">Fulfill your religious obligations through Fitra, Fidya, and Kaffara with full transparency.</p>
+                    </div>
+                    <div>
+                        <button onclick="alert('Proceeding to Fitra / Fidya Donation!')" class="bg-white text-saylani-green hover:bg-gray-100 font-extrabold text-xs px-6 py-3 rounded-full shadow transition-all">
+                            DONATE NOW
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. OUR IMPACT IN NUMBERS -->
+    <section class="py-16 bg-saylani-green text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold font-heading mb-2">Our Impact In Numbers</h2>
+            <p class="text-emerald-100 text-sm mb-12">Real-time data showing our commitment to serving humanity</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Stat 1 -->
+                <div class="border border-emerald-400/40 bg-white/10 backdrop-blur-sm rounded-2xl p-6 flex flex-col items-center justify-center space-y-3">
+                    <div class="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-stethoscope"></i>
+                    </div>
+                    <h3 class="text-3xl font-extrabold font-heading">1,500,000</h3>
+                    <p class="text-xs text-emerald-100 font-medium">Lives served every year across Pakistan</p>
+                </div>
+
+                <!-- Stat 2 -->
+                <div class="border border-emerald-400/40 bg-white/10 backdrop-blur-sm rounded-2xl p-6 flex flex-col items-center justify-center space-y-3">
+                    <div class="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <h3 class="text-3xl font-extrabold font-heading">250,000</h3>
+                    <p class="text-xs text-emerald-100 font-medium">People Fed Daily</p>
+                </div>
+
+                <!-- Stat 3 -->
+                <div class="border border-emerald-400/40 bg-white/10 backdrop-blur-sm rounded-2xl p-6 flex flex-col items-center justify-center space-y-3">
+                    <div class="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-baby"></i>
+                    </div>
+                    <h3 class="text-3xl font-extrabold font-heading">12,000</h3>
+                    <p class="text-xs text-emerald-100 font-medium">Family Adoptions every Month</p>
+                </div>
+
+                <!-- Stat 4 -->
+                <div class="border border-emerald-400/40 bg-white/10 backdrop-blur-sm rounded-2xl p-6 flex flex-col items-center justify-center space-y-3">
+                    <div class="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center text-2xl">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-3xl font-extrabold font-heading">400,000</h3>
+                    <p class="text-xs text-emerald-100 font-medium">Students taught annually</p>
+                </div>
+
+            </div>
+
+            <p class="mt-10 font-bold text-emerald-100 text-sm sm:text-base">Join us in serving nearly 450,000 underprivileged people daily</p>
+        </div>
+    </section>
+
+    <!-- 6. WHAT WE ARE DOING SECTION -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-2 mb-8">
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-gray-900">What We Are <span class="text-saylani-green">Doing</span></h2>
+                <p class="text-gray-500 text-sm max-w-2xl mx-auto">Our organization has a long tradition of serving humanity and empowering the underprivileged.</p>
+            </div>
+
+            <!-- Filters -->
+            <div class="flex items-center justify-center gap-3 mb-10">
+                <button class="bg-saylani-green text-white font-bold text-xs px-6 py-2 rounded-full">All</button>
+                <button class="bg-white text-gray-700 hover:bg-gray-100 font-bold text-xs px-6 py-2 rounded-full border border-gray-200">Medical</button>
+                <button class="bg-white text-gray-700 hover:bg-gray-100 font-bold text-xs px-6 py-2 rounded-full border border-gray-200">Welfare</button>
+                <button class="bg-white text-gray-700 hover:bg-gray-100 font-bold text-xs px-6 py-2 rounded-full border border-gray-200">Education</button>
+            </div>
+
+            <!-- Image Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="relative rounded-2xl overflow-hidden h-64 group shadow-md">
+                    <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-4 left-0 right-0 text-center">
+                        <span class="bg-white text-saylani-green font-extrabold text-xs px-4 py-2 rounded-full shadow">DASTARKHWAN</span>
+                    </div>
+                </div>
+
+                <div class="relative rounded-2xl overflow-hidden h-64 group shadow-md">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-4 left-0 right-0 text-center">
+                        <span class="bg-white text-saylani-green font-extrabold text-xs px-4 py-2 rounded-full shadow">CLEAN WATER</span>
+                    </div>
+                </div>
+
+                <div class="relative rounded-2xl overflow-hidden h-64 group shadow-md">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-4 left-0 right-0 text-center">
+                        <span class="bg-white text-saylani-green font-extrabold text-xs px-4 py-2 rounded-full shadow">SBIL EDUCATION</span>
+                    </div>
+                </div>
+
+                <div class="relative rounded-2xl overflow-hidden h-64 group shadow-md">
+                    <img src="https://images.unsplash.com/photo-1581579438747-1dc8d1e292c7?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-4 left-0 right-0 text-center">
+                        <span class="bg-white text-saylani-green font-extrabold text-xs px-4 py-2 rounded-full shadow">OLD AGE HOME</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. TESTIMONIALS SECTION -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-2 mb-12">
+                <span class="bg-emerald-100 text-saylani-green text-xs font-extrabold px-3 py-1 rounded-full uppercase">OUR TESTIMONIALS</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-gray-900">What They <span class="text-saylani-green">Say?</span></h2>
+                <p class="text-gray-500 text-sm">Making a difference in the lives of thousands every day through comprehensive welfare programs</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm relative space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" class="w-14 h-14 rounded-full object-cover border-2 border-saylani-green">
+                            <div>
+                                <h4 class="font-extrabold text-gray-900 font-heading">Arshad Wali Muhammad</h4>
+                                <p class="text-xs text-gray-500">Group Director, Gerry's Group</p>
+                                <div class="flex text-amber-400 text-xs mt-1">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span class="text-gray-400 ml-1 font-semibold">(4.5)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-quote-right text-4xl text-gray-200"></i>
+                    </div>
+                    <p class="text-xs text-gray-600 leading-relaxed italic">
+                        "Saylani Welfare Trust is a name that needs no introduction today. The journey this team embarked upon was made possible owing to their zeal, enthusiasm & commitment to the society and by the grace of Allah (SWT)."
+                    </p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm relative space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop" class="w-14 h-14 rounded-full object-cover border-2 border-saylani-green">
+                            <div>
+                                <h4 class="font-extrabold text-gray-900 font-heading">Asif Ismail</h4>
+                                <p class="text-xs text-gray-500">C.O.O. & Director, Premier Cables Pvt. Ltd</p>
+                                <div class="flex text-amber-400 text-xs mt-1">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span class="text-gray-400 ml-1 font-semibold">(4.5)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-quote-right text-4xl text-gray-200"></i>
+                    </div>
+                    <p class="text-xs text-gray-600 leading-relaxed italic">
+                        "When we talk about serving humanity, no second thought occurs other than Saylani Welfare Trust. Saylani is doing a tremendous job in terms of everything they do for a troubled humanity."
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. LATEST BLOGS SECTION -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-2 mb-12">
+                <span class="bg-emerald-100 text-saylani-green text-xs font-extrabold px-3 py-1 rounded-full uppercase">LATEST BLOGS</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-gray-900">Our <span class="text-saylani-green">Blogs</span></h2>
+                <p class="text-gray-500 text-sm">Stay updated with insights, stories, and news from our welfare initiatives</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Blog 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-48">
+                            <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover">
+                            <span class="absolute top-3 right-3 bg-saylani-green text-white text-[10px] font-bold px-2.5 py-1 rounded-md">Blog</span>
+                        </div>
+                        <div class="p-5 space-y-2">
+                            <span class="text-[11px] text-gray-400 font-semibold"><i class="fa-regular fa-clock mr-1"></i> 29/10/2026</span>
+                            <h4 class="font-extrabold text-sm font-heading text-gray-900 leading-snug">Ramadan 2027: Donate Food and Blankets to Needy...</h4>
+                            <p class="text-xs text-gray-500 line-clamp-2">Learn why children in Pakistan miss school and how an education donation for fees supports them...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-48">
+                            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover">
+                            <span class="absolute top-3 right-3 bg-saylani-green text-white text-[10px] font-bold px-2.5 py-1 rounded-md">Blog</span>
+                        </div>
+                        <div class="p-5 space-y-2">
+                            <span class="text-[11px] text-gray-400 font-semibold"><i class="fa-regular fa-clock mr-1"></i> 24/10/2026</span>
+                            <h4 class="font-extrabold text-sm font-heading text-gray-900 leading-snug">Out of School Children: How Your Education Donation...</h4>
+                            <p class="text-xs text-gray-500 line-clamp-2">Learn why children in Pakistan miss school and how an education donation supports bright futures...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-48">
+                            <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb0?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover">
+                            <span class="absolute top-3 right-3 bg-saylani-green text-white text-[10px] font-bold px-2.5 py-1 rounded-md">Blog</span>
+                        </div>
+                        <div class="p-5 space-y-2">
+                            <span class="text-[11px] text-gray-400 font-semibold"><i class="fa-regular fa-clock mr-1"></i> 23/10/2026</span>
+                            <h4 class="font-extrabold text-sm font-heading text-gray-900 leading-snug">Sadqah in Rajab: Start Your Early Ramadan Donation</h4>
+                            <p class="text-xs text-gray-500 line-clamp-2">Give sadqah in Rajab and plan your early Ramadan donation. Choose the right cause to sponsor...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog 4 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-48">
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover">
+                            <span class="absolute top-3 right-3 bg-saylani-green text-white text-[10px] font-bold px-2.5 py-1 rounded-md">Blog</span>
+                        </div>
+                        <div class="p-5 space-y-2">
+                            <span class="text-[11px] text-gray-400 font-semibold"><i class="fa-regular fa-clock mr-1"></i> 14/10/2026</span>
+                            <h4 class="font-extrabold text-sm font-heading text-gray-900 leading-snug">Online Quran Academy: How Sadaqah Funds Free Quran...</h4>
+                            <p class="text-xs text-gray-500 line-clamp-2">See how your sadaqah for education supports free online Quran classes for youth worldwide...</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-10">
+                <a href="#" class="inline-flex items-center gap-2 bg-saylani-green hover:bg-saylani-darkGreen text-white font-bold text-xs px-8 py-3 rounded-full transition-all">
+                    SEE MORE <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. MEDIA UPDATES & LATEST NEWS -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+            
+            <!-- Media Updates -->
+            <div>
+                <div class="text-center space-y-2 mb-8">
+                    <span class="bg-emerald-100 text-saylani-green text-xs font-extrabold px-3 py-1 rounded-full uppercase">LATEST UPDATE</span>
+                    <h2 class="text-3xl font-extrabold font-heading text-gray-900">Media <span class="text-saylani-green">Updates</span></h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm p-4 space-y-3 border border-gray-100">
+                        <div class="relative rounded-xl overflow-hidden h-44">
+                            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover">
+                            <span class="absolute top-3 right-3 bg-saylani-green text-white text-[10px] font-bold px-2 py-0.5 rounded">Video</span>
+                        </div>
+                        <span class="text-[11px] text-gray-400 font-semibold"><i class="fa-regular fa-clock mr-1"></i> 19/1/2026</span>
+                        <h4 class="font-extrabold text-sm font-heading text-gray-800">Maulana Abdul Habib Attari Visits Saylani Zaitoon Ashraf IT Park</h4>
+                    </div>
+
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm p-4 space-y-3 border border-gray-100">
+                        <div class="relative rounded-xl overflow-hidden h-44">
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover">
+                            <span class="absolute top-3 right-3 bg-saylani-green text-white text-[10px] font-bold px-2 py-0.5 rounded">Video</span>
+                        </div>
+                        <span class="text-[11px] text-gray-400 font-semibold"><i class="fa-regular fa-clock mr-1"></i> 19/1/2026</span>
+                        <h4 class="font-extrabold text-sm font-heading text-gray-800">Saylani Welfare Trust & KAACIB Job Fair Opportunities</h4>
+                    </div>
+
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm p-4 space-y-3 border border-gray-100">
+                        <div class="relative rounded-xl overflow-hidden h-44">
+                            <img src="https://images.unsplash.com/photo-1547683905-f686c993aae5?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover">
+                            <span class="absolute top-3 right-3 bg-saylani-green text-white text-[10px] font-bold px-2 py-0.5 rounded">Video</span>
+                        </div>
+                        <span class="text-[11px] text-gray-400 font-semibold"><i class="fa-regular fa-clock mr-1"></i> 19/1/2026</span>
+                        <h4 class="font-extrabold text-sm font-heading text-saylani-green">Khyber Pakhtunkhwa Floods - Saylani Relief Operations</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Latest News -->
+            <div>
+                <div class="text-center space-y-2 mb-8">
+                    <span class="bg-emerald-100 text-saylani-green text-xs font-extrabold px-3 py-1 rounded-full uppercase">LATEST NEWS</span>
+                    <h2 class="text-3xl font-extrabold font-heading text-gray-900">Latest <span class="text-saylani-green">News</span></h2>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm p-4 space-y-3 border border-gray-100">
+                        <div class="relative rounded-xl overflow-hidden h-40">
+                            <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover">
+                            <span class="absolute top-3 right-3 bg-saylani-blue text-white text-[10px] font-bold px-2 py-0.5 rounded">News</span>
+                        </div>
+                        <span class="text-[11px] text-gray-400 font-semibold"><i class="fa-regular fa-clock mr-1"></i> 20/1/2026</span>
+                        <h4 class="font-extrabold text-xs font-heading text-saylani-green">Maulana Bashir Farooq Qadri reaches among flood victims</h4>
+                    </div>
+
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm p-4 space-y-3 border border-gray-100">
+                        <div class="relative rounded-xl overflow-hidden h-40">
+                            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover">
+                            <span class="absolute top-3 right-3 bg-saylani-blue text-white text-[10px] font-bold px-2 py-0.5 rounded">News</span>
+                        </div>
+                        <span class="text-[11px] text-gray-400 font-semibold"><i class="fa-regular fa-clock mr-1"></i> 20/1/2026</span>
+                        <h4 class="font-extrabold text-xs font-heading text-gray-800">A Heartfelt Visit of Saad Afridi CEO of Scents N Stories</h4>
+                    </div>
+
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm p-4 space-y-3 border border-gray-100">
+                        <div class="relative rounded-xl overflow-hidden h-40">
+                            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover">
+                            <span class="absolute top-3 right-3 bg-saylani-blue text-white text-[10px] font-bold px-2 py-0.5 rounded">News</span>
+                        </div>
+                        <span class="text-[11px] text-gray-400 font-semibold"><i class="fa-regular fa-clock mr-1"></i> 20/1/2026</span>
+                        <h4 class="font-extrabold text-xs font-heading text-gray-800">Javed Alam Odho, Additional IG Karachi, at Saylani HQ</h4>
+                    </div>
+
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm p-4 space-y-3 border border-gray-100">
+                        <div class="relative rounded-xl overflow-hidden h-40">
+                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=600&auto=format&fit=crop" class="w-full h-full object-cover">
+                            <span class="absolute top-3 right-3 bg-saylani-blue text-white text-[10px] font-bold px-2 py-0.5 rounded">News</span>
+                        </div>
+                        <span class="text-[11px] text-gray-400 font-semibold"><i class="fa-regular fa-clock mr-1"></i> 20/1/2026</span>
+                        <h4 class="font-extrabold text-xs font-heading text-gray-800">Saylani Mega IT Exam 2026 - A Glimpse of the Future!</h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 10. NEWSLETTER SECTION -->
+    <section class="py-14 bg-saylani-green text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center space-y-4">
+            <h2 class="text-3xl font-extrabold font-heading">Subscribe Our Newsletter</h2>
+            <p class="text-xs sm:text-sm text-emerald-100">Our organization has a long tradition of serving humanity and empowering the underprivileged.</p>
+
+            <form onsubmit="event.preventDefault(); alert('Subscribed successfully!');" class="pt-4 max-w-xl mx-auto flex flex-col sm:flex-row gap-3">
+                <div class="relative flex-grow">
+                    <i class="fa-regular fa-envelope absolute left-4 top-3.5 text-gray-400"></i>
+                    <input type="email" placeholder="Type your email" required class="w-full pl-11 pr-4 py-3 rounded-full text-xs text-gray-800 focus:outline-none shadow-inner">
+                </div>
+                <button type="submit" class="bg-white text-saylani-green hover:bg-emerald-50 font-extrabold text-xs px-8 py-3 rounded-full shadow transition-all">
+                    Subscribe <i class="fa-solid fa-chevron-right ml-1 text-[10px]"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 11. FOOTER -->
+    <footer class="bg-saylani-darkBg text-gray-300 text-xs py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            <!-- Col 1 -->
+            <div class="space-y-4">
+                <div class="flex items-center gap-2">
+                    <svg class="w-10 h-10" viewBox="0 0 100 100" fill="none">
+                        <circle cx="50" cy="50" r="46" fill="#20ad3b"/>
+                        <path d="M 28 50 Q 50 15 72 50 Q 50 85 28 50 Z" fill="#ffffff"/>
+                        <circle cx="50" cy="50" r="14" fill="#0d5db8"/>
+                    </svg>
+                    <span class="text-xl font-extrabold text-white font-heading">Saylani<span class="text-saylani-green">Welfare</span></span>
+                </div>
+                <p class="text-gray-400 leading-relaxed">
+                    Saylani Welfare International Trust is dedicated to uplifting the impoverished through comprehensive support services including food, health, and education.
+                </p>
+                <div class="flex space-x-3 text-sm pt-2">
+                    <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-saylani-green text-white transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-saylani-green text-white transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-saylani-green text-white transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-saylani-green text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-saylani-green text-white transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- Col 2: Pages -->
+            <div class="space-y-3">
+                <h4 class="text-white font-extrabold text-sm font-heading">Pages</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#" class="hover:text-saylani-green">Home</a></li>
+                    <li><a href="#" class="hover:text-saylani-green">About</a></li>
+                    <li><a href="#" class="hover:text-saylani-green">Media</a></li>
+                    <li><a href="#" class="hover:text-saylani-green">Contact Us</a></li>
+                    <li><a href="#" class="hover:text-saylani-green">Bank Details</a></li>
+                    <li><a href="#" class="hover:text-saylani-green">Donor Login Account</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3: Categories -->
+            <div class="space-y-3">
+                <h4 class="text-white font-extrabold text-sm font-heading">Donation Categories</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#" class="hover:text-saylani-green">Sadqa e Jariah</a></li>
+                    <li><a href="#" class="hover:text-saylani-green">Sadqa / Aqiqa Animal</a></li>
+                    <li><a href="#" class="hover:text-saylani-green">Food Donation</a></li>
+                    <li><a href="#" class="hover:text-saylani-green">Education</a></li>
+                    <li><a href="#" class="hover:text-saylani-green">Medical & Healthcare</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 4: Contact us -->
+            <div class="space-y-3">
+                <h4 class="text-white font-extrabold text-sm font-heading">Contact us</h4>
+                <div class="space-y-2 text-gray-400">
+                    <p class="flex items-start gap-2">
+                        <i class="fa-solid fa-location-dot mt-0.5 text-saylani-green"></i>
+                        <span>A-25, Bahadurabad Chowrangi Karachi, Pakistan</span>
+                    </p>
+                    <p class="flex items-center gap-2">
+                        <i class="fa-regular fa-envelope text-saylani-green"></i>
+                        <span>info@saylaniwelfare.com</span>
+                    </p>
+                    <p class="flex items-center gap-2">
+                        <i class="fa-solid fa-phone text-saylani-green"></i>
+                        <span>+92 21 111 729 526 (UAN)</span>
+                    </p>
+                    <p class="flex items-center gap-2">
+                        <i class="fa-solid fa-phone text-saylani-green"></i>
+                        <span>+92 21 38729526</span>
+                    </p>
+                    <p class="flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-saylani-green"></i>
+                        <span>+92 311 1729526</span>
+                    </p>
+                    <p class="flex items-center gap-2">
+                        <i class="fa-solid fa-globe text-saylani-green"></i>
+                        <span>+1 337 337 2370 (USA)</span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-6 border-t border-gray-800 text-center text-gray-500 text-[11px]">
+            © 2026 Saylani Welfare International Trust. Designed & Developed for Responsive Web.
+        </div>
+    </footer>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        // Mobile Navigation Toggle Logic
+        const mobileNavToggle = document.getElementById('mobileNavToggle');
+        const mobileDrawer = document.getElementById('mobileDrawer');
+        const navIcon = document.getElementById('navIcon');
+
+        mobileNavToggle.addEventListener('click', () => {
+            mobileDrawer.classList.toggle('hidden');
+            if (mobileDrawer.classList.contains('hidden')) {
+                navIcon.className = 'fa-solid fa-bars';
+            } else {
+                navIcon.className = 'fa-solid fa-xmark';
+            }
+        });
+    </script>
+</body>
+</html>
